@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game</title>
+    <link rel="stylesheet" href="{% static 'game/styles.css' %}">
+    <script src="{% static 'game/game.js' %}" defer></script>
+</head>
+<body>
+    <div class="navbar">
+        <h2>🐍 Snake Game</h2>
+        <a href="{% url 'logout' %}" class="logout-btn">Logout</a>
+    </div>
+
+    <div class="game-container">
+        <h1>Welcome, {{ user.username }}!</h1>
+        <canvas id="gameCanvas"></canvas>
+        <div class="scoreboard">
+            <p>Score: <span id="score">0</span></p>
+        </div>
+        <p class="instructions">Use arrow keys to control the snake. Eat the food to grow!</p>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            startGame();
+        });
+    </script>
+</body>
+</html>

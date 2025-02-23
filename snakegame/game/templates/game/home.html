@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: url('https://wallpapers.com/images/hd/snake-game-1680-x-1050-background-6syqer1fr6oahe0b.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 30px;
+            background-color: rgba(0, 0, 0, 0.8);
+            align-items: center;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            padding: 10px 15px;
+            margin: 0 5px;
+            border-radius: 5px;
+            background: limegreen;
+            transition: background 0.3s ease-in-out;
+        }
+        .navbar a:hover {
+            background-color: darkgreen;
+        }
+        .game-title {
+            font-size: 50px;
+            margin-top: 150px;
+            text-shadow: 2px 2px 5px black;
+        }
+        .welcome-text {
+            font-size: 24px;
+            margin-top: 10px;
+            text-shadow: 1px 1px 3px black;
+        }
+        .login-text {
+            font-size: 20px;
+            margin-top: 15px;
+            font-weight: bold;
+            text-shadow: 1px 1px 3px black;
+            color: #ffcc00; /* Highlighted color */
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <h2 style="margin: 0; color: white;">Snake Game</h2>
+        <div>
+            <a href="{% url 'login' %}">Login</a>
+            <a href="{% url 'signup' %}">Signup</a>
+        </div>
+    </div>
+
+    <h1 class="game-title">Welcome to Snake Game</h1>
+    <p class="welcome-text">Enjoy the classic snake game with modern UI.</p>
+    <p class="login-text">Login to Play the Game</p> <!-- Added Login text here -->
+</body>
+</html>
