@@ -3,7 +3,7 @@
 This project is a Sign-Up Page built using Django, which allows users to register by entering a username and password. The page is designed with a modern and responsive UI, ensuring a smooth user experience. The implementation follows Django's authentication system and includes CSRF protection for security.
 
 **How to Execute the Project**
-Clone the Repository:
+**Clone the Repository:**
 First, download the project from GitHub using the git clone command. Then, navigate to the project directory.
 
 **Set Up a Virtual Environment:**
